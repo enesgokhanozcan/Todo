@@ -5,7 +5,7 @@
   display: grid;
   place-items: center;
 }
-.app__container{
+.app_container{
   height:700px;
   width:500px;
   display: flex;
@@ -15,7 +15,7 @@
   border-radius: 12px;
   padding: 32px 0;
 }
-.app__todoContainer{
+.app_todoContainer{
   flex: 1;
   width:100%;
   display: flex;

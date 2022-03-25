@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { TodoSchema } from "../model";
 
-const TodoItem = () => {
-  return (
-    <div>TodoItem</div>
-  )
-}
+interface Props {
+    todo: TodoSchema;
+    todos: TodoSchema[];
+    setTodos: React.Dispatch<React.SetStateAction<TodoSchema[]>>;
+  }
 
-export default TodoItem
+const TodoItem: React.FC<Props> = ({ todo, todos, setTodos }) => {
+  return(
+    <p>Hello</p>
+  );
+};
+
+export default TodoItem;

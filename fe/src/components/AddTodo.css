@@ -12,14 +12,14 @@
 input{
     background: none;
     border: none;
-    margin-left: 12px;
+    margin-left: 2px;
     flex: 1;
 }
 input:focus{
     outline: none;
 }
 button{
-    margin-right: 8px;
+    margin-left: 100px;
     background-color: rgb(214, 213, 213);
     border: none;
     border-radius: 10px;
