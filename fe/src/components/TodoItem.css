@@ -10,6 +10,8 @@
 .todoItem>p{
     flex: 1;
 }
-.todoItem--done{
-    text-decoration: line-through;
+.icon_done{
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }
