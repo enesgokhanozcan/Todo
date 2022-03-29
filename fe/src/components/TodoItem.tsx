@@ -2,20 +2,18 @@ import React from "react";
 import { TodoSchema } from "../model";
 import "./TodoItem.css";
 import { MdDone } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../app/store";
+import { setStatus } from "../features/todoSlice";
 
 interface Props {
   todo: TodoSchema;
-  todos: TodoSchema[];
-  setTodos: React.Dispatch<React.SetStateAction<TodoSchema[]>>;
 }
 
-const TodoItem: React.FC<Props> = ({ todo, todos, setTodos }) => {
+const TodoItem: React.FC<Props> = ({ todo }) => {
+  const dispatch = useDispatch<AppDispatch>();
   const handleDone = (id: number) => {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
-      )
-    );
+    dispatch(setStatus({isCompleted:!todo.isCompleted,id:todo.id}));
   };
   return (
     <form className="todoItem">
